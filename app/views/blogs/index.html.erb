@@ -1,0 +1,8 @@
+<h1>Welcome to blogs page!</h1>
+
+<% @blogs.each do |blog|  %>
+<h3> <%= blog.title %> </h3>
+<h1> <%= link_to "Read post", blog_path(blog.id) %> </h1>
+<% end %>
+
+<h1>Make new blog post</h1>

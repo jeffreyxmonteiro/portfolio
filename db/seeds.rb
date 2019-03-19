@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Making seeds!"
+Blog.create!(
+  title: "How to get a job",
+  body: "Work hard!"
+  )
+
+Blog.create!(
+  title: "How to get a monkey",
+  body: "Go to the zoo!"
+  )
+
+Blog.create!(
+  title: "How to get rest",
+  body: "Go to sleep!"
+  )
+
+puts "Finished making seeds :D"
