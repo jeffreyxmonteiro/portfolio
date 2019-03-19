@@ -1,3 +1,11 @@
 <h1><%= @blog.title %></h1>
 <p><%= @blog.body %></p>
-<%= link_to "Go home", blogs_path %>
+
+<p>
+  <%= link_to "Go home", blogs_path %> |
+  <%= link_to "Edit post", edit_blog_path %> |
+  <%= link_to "Delete post", blog_path, method: :delete %>
+</p>
+
+
+
