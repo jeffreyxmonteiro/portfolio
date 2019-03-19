@@ -1,8 +1,11 @@
 <h1>Welcome to blogs page!</h1>
 
-<% @blogs.each do |blog|  %>
-<h3> <%= blog.title %> </h3>
-<h1> <%= link_to "Read post", blog_path(blog.id) %> </h1>
+<% @blogs.reverse.each do |blog|  %>
+  <p>
+    <%= blog.title %> |
+    <%= link_to "Read post", blog_path(blog.id) %> |
+    <%= link_to "Delete post", blog_path(blog), method: :delete %>
+  </p>
 <% end %>
 
-<h1>Make new blog post</h1>
+<p><%= link_to "Make new blog post", new_blog_path  %></p>
