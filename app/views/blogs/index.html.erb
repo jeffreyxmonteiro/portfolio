@@ -3,7 +3,7 @@
 <% @blogs.reverse.each do |blog|  %>
   <p>
     <%= blog.title %> |
-    <%= link_to "Read post", blog_path(blog.id) %> |
+    <%= link_to "Read post", blog_path(blog) %> |
     <%= link_to "Delete post", blog_path(blog), method: :delete %>
   </p>
 <% end %>
