@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome to Jefe's Portfolio Page</h1>
+
+<h3>Blog Posts</h3>
+<% @posts.each do |post| %>
+  <ul>
+    <li>
+      <%= post.title %>
+    </li>
+  </ul>
+<% end %>
+
+<h3>Skills</h3>
+<% @skills.each do |skill| %>
+  <ul>
+    <li>
+      <%= skill.title %>: <%= skill.percent_utilized %>
+    </li>
+  </ul>
+<% end %>
+
+
+
