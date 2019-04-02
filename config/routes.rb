@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :portfolios
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
+
+  #get 'pages/home'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "blogs", to: 'blogs#index'
 
@@ -14,4 +15,6 @@ Rails.application.routes.draw do
   get "blogs/:id", to: 'blogs#show', as: :blog
   patch "blogs/:id", to: 'blogs#update'
   delete "blogs/:id", to: 'blogs#destroy'
+
+  root to: 'pages#home'
 end
