@@ -1,6 +1,9 @@
 class PortfoliosController < ApplicationController
 
   def index
+    #@portfolio_items = Portfolio.where(subtitle: "Angular")
+    #@portfolio_items = Portfolio.angular   We are using the model class definition.
+    #@portfolio_items = Portfolio.ruby_on_rails_portfolio_items We are using custom scope.
     @portfolio_items = Portfolio.all
   end
 
