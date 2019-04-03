@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#db:setup to restart database so you dont have to keep destroying seeds
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
@@ -54,3 +56,11 @@ end
 end
 
 puts "9 portfolio items created."
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+      name: "Technology #{technology}"
+    )
+end
+
+puts "3 technologies created!"
