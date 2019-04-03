@@ -3,7 +3,7 @@
 <%= simple_form_for [@blog] do |f| %>
 <%=  f.input :title %>
 <%=  f.input :body %>
-<%= f.submit "Edit Post", class: "btn btn-primary" %>
+<%= f.submit "Update Post", class: "btn btn-primary" %>
 <% end %>
 
 <p> <%= link_to "Return to Blog Post", blog_path %>   </p>

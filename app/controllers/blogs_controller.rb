@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
 
   def index
@@ -34,6 +34,15 @@ class BlogsController < ApplicationController
     # @blog = Blog.find(params[:id])
     @blog.destroy
     redirect_to blogs_path
+  end
+
+  def toggle_status
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: "Post status updated!"
   end
 
 
