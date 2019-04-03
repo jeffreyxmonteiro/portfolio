@@ -6,5 +6,12 @@
 <%=  f.input :body %>
 <%=  f.input :main_image %>
 <%=  f.input :thumb_image %>
+<%= f.simple_fields_for :technologies do |technology_form| %>
+  <ul>
+    <li>
+      <%= technology_form.input :name %>
+    </li>
+  </ul>
+<% end %>
 <%= f.submit "Create Portfolio", class: "btn btn-primary" %>
 <% end %>

@@ -1,15 +1,20 @@
 class PortfoliosController < ApplicationController
 
   def index
+    #@portfolio_items = Portfolio.where(subtitle: "Angular")
+    #@portfolio_items = Portfolio.angular   We are using the model class definition.
+    #@portfolio_items = Portfolio.ruby_on_rails_portfolio_items We are using custom scope.
     @portfolio_items = Portfolio.all
   end
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image,
+      technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
