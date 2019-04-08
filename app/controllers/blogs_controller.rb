@@ -4,10 +4,13 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @page_title = "My Portfolio Blog"
   end
 
   def show
     # @blog = Blog.find(params[:id])
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   def new
