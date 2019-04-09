@@ -3,5 +3,6 @@
    Status: <%= link_to blog.status, toggle_status_blog_path(blog) %> |
   <%= link_to "Read post", blog_path(blog) %> |
   <%= link_to "Edit post", edit_blog_path(blog) %> |
-  <%= link_to "Delete post", blog_path(blog), method: :delete %>
+  <%= link_to "Delete post", blog_path(blog), method: :delete %> |
+  Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
 </p>
