@@ -1,17 +1,3 @@
 <h1>Create a new portfolio item</h1>
 
-<%= simple_form_for @portfolio_item do |f| %>
-<%=  f.input :title %>
-<%=  f.input :subtitle %>
-<%=  f.input :body %>
-<%=  f.input :main_image %>
-<%=  f.input :thumb_image %>
-<%= f.simple_fields_for :technologies do |technology_form| %>
-  <ul>
-    <li>
-      <%= technology_form.input :name %>
-    </li>
-  </ul>
-<% end %>
-<%= f.submit "Create Portfolio", class: "btn btn-primary" %>
-<% end %>
+<%= render 'form', portfolio_item: @portfolio_item %>
