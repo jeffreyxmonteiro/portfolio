@@ -1,13 +1,5 @@
 <h1>Welcome to blogs page!</h1>
 
-<% @blogs.reverse.each do |blog|  %>
-  <p>
-    <%= blog.title %> |
-     Status: <%= link_to blog.status, toggle_status_blog_path(blog) %> |
-    <%= link_to "Read post", blog_path(blog) %> |
-    <%= link_to "Edit post", edit_blog_path(blog) %> |
-    <%= link_to "Delete post", blog_path(blog), method: :delete %>
-  </p>
-<% end %>
+<%= render @blogs %>
 
 <p><%= link_to "Make new blog post", new_blog_path  %></p>
