@@ -2,4 +2,4 @@
 
 <%= render @blogs %>
 
-<p><%= link_to "Make new blog post", new_blog_path %></p>
+<p><%= link_to "Make new blog post", new_blog_path if logged_in?(:site_admin) %></p>

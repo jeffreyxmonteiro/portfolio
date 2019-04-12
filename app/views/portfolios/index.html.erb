@@ -2,7 +2,7 @@
 
 <!-- <p><a href="portfolios/new">Create New Item</a></p> -->
 
-<p><%= link_to "Create New Portfolio Item", new_portfolio_path %></p>
+<p><%= link_to "Create New Portfolio Item", new_portfolio_path if logged_in?(:site_admin) %></p>
 
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
