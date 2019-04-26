@@ -120,3 +120,13 @@ body {
 .auth-links a {
   color: black;
 }
+
+.register-links {
+  text-align: center;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
