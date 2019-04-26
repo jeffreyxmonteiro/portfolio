@@ -2,7 +2,7 @@
 
 <%= simple_form_for [@blog] do |f| %>
 <%=  f.input :title %>
-<%=  f.input :body %>
+<%=  f.input :body, :input_html => {:rows => 15} %>
 <%= f.submit "Update Post", class: "btn btn-primary" %>
 <% end %>
 
