@@ -1,5 +1,12 @@
-<h1>Welcome to blogs page!</h1>
 
-<%= render @blogs %>
+  <h1>Welcome to blogs page!</h1>
 
-<p><%= link_to "Make new blog post", new_blog_path if logged_in?(:site_admin) %></p>
+
+
+  <p><%= link_to "Make new blog post", new_blog_path if logged_in?(:site_admin) %></p>
+  <%= render @blogs %>
+
+
+
+
+
