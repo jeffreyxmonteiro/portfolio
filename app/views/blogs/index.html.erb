@@ -1,12 +1,10 @@
 
   <h1>Welcome to blogs page!</h1>
-
-
-
   <p><%= link_to "Make new blog post", new_blog_path if logged_in?(:site_admin) %></p>
+  <%= paginate @blogs %>
   <%= render @blogs %>
 
-
+  <%= paginate @blogs %>
 
 
 

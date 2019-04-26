@@ -1,3 +1,21 @@
+GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: c7d19fa403a8139ba03fd7e08415f347486db3c0
+  branch: master
+  specs:
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,6 +99,8 @@ GEM
     ffi (1.10.0-java)
     ffi (1.10.0-x64-mingw32)
     ffi (1.10.0-x86-mingw32)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -243,9 +263,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.2)
+  font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari!
   listen (>= 3.0.5, < 3.2)
   monteiro_view_tool (~> 0.1.0)
   petergate (~> 2.0, >= 2.0.1)
