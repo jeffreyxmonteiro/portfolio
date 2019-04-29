@@ -3,8 +3,8 @@
     <div class="col-md-6">
       <%=  f.input :title %>
       <%=  f.input :subtitle %>
-      <%=  f.input :main_image %>
-      <%=  f.input :thumb_image %>
+      <%=  f.input :main_image, as: :file %>
+      <%=  f.input :thumb_image, as: :file %>
     </div>
     <div class="col-md-6">
       <%=  f.input :body, :input_html => {:rows => 14} %>

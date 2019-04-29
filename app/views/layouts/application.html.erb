@@ -15,6 +15,16 @@
   <body>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
+      <%= video_tag(
+          'tiger.mp4',
+          id: 'background',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          poster: 'tiger-image.png'
+        )
+        %>
+
       <%= render "shared/application_nav" %>
 
       <%= yield %>
