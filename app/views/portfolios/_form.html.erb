@@ -11,14 +11,16 @@
     </div>
     <div class="col-md-12">
       <h3>Technologies used</h3>
-      <%= f.simple_fields_for :technologies do |technology_form| %>
-        <ul>
-          <li>
-            <%= technology_form.input :name %>
-          </li>
-        </ul>
-      <% end %>
-      <%= f.submit "Submit Portfolio", class: "btn btn-primary" %>
+      <div>
+        <%= f.simple_fields_for :technologies do |technology_form| %>
+          <%= render 'technology_fields', f: technology_form %>
+        <% end %>
+
+        <div>
+          <%= link_to_add_association 'Add Technology', f, :technologies %>
+        </div>
+      </div>
     </div>
+    <%= f.submit "Submit Portfolio", class: "btn btn-primary" %>
   </div>
 <% end %>
