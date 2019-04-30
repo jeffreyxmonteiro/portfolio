@@ -1,6 +1,11 @@
 <h1>Edit Blog</h1>
 
 <%= simple_form_for [@blog] do |f| %>
+<% if @blog.errors.any? %>
+  <% @blog.errors.full_messages.each do |error| %>
+    <%= js add_gritter(error, title: "Jeff Monteiro Portfolio", sticky: false) %>
+  <% end %>
+<% end %>
 <%=  f.input :title %>
 <%=  f.input :body, :input_html => {:rows => 15} %>
 <%= f.submit "Update Post", class: "btn btn-primary" %>
