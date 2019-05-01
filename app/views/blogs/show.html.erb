@@ -1,9 +1,26 @@
-<h1><%= @blog.title %></h1>
-<p>
-  <%= link_to "Go home", blogs_path %> |
-  <%= link_to "Edit post", edit_blog_path %> |
-  <%= link_to "Delete post", blog_path, method: :delete %>
-</p>
-<p><%= @blog.body %></p>
+<div class="col-sm-8 blog-main">
+  <h1><%= @blog.title %></h1>
+  <p>
+    <%= link_to "Go home", blogs_path %> |
+    <%= link_to "Edit post", edit_blog_path %> |
+    <%= link_to "Delete post", blog_path, method: :delete %>
+  </p>
+  <p><%= @blog.body %></p>
+
+  <% unless current_user.is_a? GuestUser %>
+    <%= form_for @comment, url: '#' do |f| %>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
+
+  <%= render @blog.comments %>
+
+</div>
+
+
 
 
