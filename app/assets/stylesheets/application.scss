@@ -156,3 +156,16 @@ body {
   background: image-url('tiger-image.png') no-repeat;
   background-size: cover;
 }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: blue;
+}
+
+.tech-news > .card {
+  padding: 30px;
+}
