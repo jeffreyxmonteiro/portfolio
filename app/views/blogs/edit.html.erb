@@ -7,6 +7,7 @@
   <% end %>
 <% end %>
 <%=  f.input :title %>
+<%= f.input :topic_id, collection: Topic.all %>
 <%=  f.input :body, :input_html => {:rows => 15} %>
 <%= f.submit "Update Post", class: "btn btn-primary" %>
 <% end %>

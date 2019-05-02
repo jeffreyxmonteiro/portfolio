@@ -7,6 +7,12 @@
   <% end %>
 <% end %>
 <%=  f.input :title %>
+<%= f.input :topic_id, collection: Topic.all %>
+<!-- , :id, :title,
+            {
+              selected: blog.topic.id,
+              include_blank: true
+            } -->
 <%=  f.input :body, :input_html => {:rows => 15} %>
 <%= f.submit "add a blog post", class: "btn btn-primary" %>
 <% end %>

@@ -5,6 +5,9 @@
     <%= link_to "Edit post", edit_blog_path %> |
     <%= link_to "Delete post", blog_path, method: :delete %>
   </p>
+  <p>
+    <strong><%= @blog.topic.title %></strong>
+  </p>
   <p><%= @blog.body %></p>
 
   <%= render 'comments/comment_form' %>
