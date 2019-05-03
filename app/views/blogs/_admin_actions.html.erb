@@ -1,0 +1,10 @@
+<% if logged_in?(:site_admin) %>
+    <nav class="breadcrumb row">
+      <div class='col'>
+      <%= link_to fa_icon('file-text'), toggle_status_blog_path(blog), class: 'breadcrumb-item', style: blog_status_color(blog) %>
+      <%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog), class: 'breadcrumb-item' %>
+      <%= link_to fa_icon('trash'), blog_path(blog), method: :delete, data: { confirm: 'Are you sure you want to delete this post' }, class: 'breadcrumb-item' %>
+      </div>
+    </nav>
+<% end %>
+
