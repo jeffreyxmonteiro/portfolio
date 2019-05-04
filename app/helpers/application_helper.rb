@@ -9,12 +9,13 @@ module ApplicationHelper
      end
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting me from #{session[:source]}!"
-      content_tag(:p, greeting, class: "source-greeting")
+      greeting = "Thanks for visiting me from #{session[:source]}, feel free to #{ link_to 'say hello', contact_path, class: 'alert-link' } if you'd like to work together :)"
+      content_tag(:div, greeting.html_safe, class: styles)
     end
   end
+
 
   def copyright_generator
     MonteiroViewTool::Renderer.copyright('Jeff Monteiro', 'All rights reserved')
