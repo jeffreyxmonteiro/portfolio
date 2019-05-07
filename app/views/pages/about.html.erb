@@ -1,7 +1,8 @@
 <div class="app-card-container">
   <div class="card">
-    <h1>About Me</h1>
-
+    <div class="header-center-about">
+     <h1>About Me</h1>
+    </div>
     <div class="row">
       <div class="col-md-5">
         <%= image_tag "jeff.jpeg", width: 300 %>
@@ -26,7 +27,16 @@
 
       </div>
       <div class="col-md-7">
-        <p>Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio </p>
+        <p>From the the land of diners, taylor ham, and aggressive driving known as New Jersey, Jeff's life and work experience has been nothing short of diverse. Some of those accolades include...
+        </p>
+        <p>Acquiring, delighting, and retaining clients at an independent financial services firm. Overseeing product development of an educational platform for international students at an edtech startup. Personally helping over 100 international students overcome their social, cultural, academic, and professional challenges in the United States across multiple schools.
+        </p>
+        <p>
+          Moving to Tokyo for four months to attend one of the best rated coding bootcamps in the world, Le Wagon. While at Le Wagon, building several applications, acting as product manager for a team of four, and pitching a product to an audience of 70+ attendees.
+        </p>
+        <p>
+          Also enjoys writing in the third person and watching nature documentaries about bears.
+        </p>
 
         <p>
           <button
@@ -50,27 +60,75 @@
           >
             Education
           </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#books"
+            aria-expanded="false"
+            aria-controler="books"
+          >
+            Books
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#podcasts"
+            aria-expanded="false"
+            aria-controler="podcasts"
+          >
+            Podcasts
+          </button>
         </p>
 
         <p>
           <div class="collapse" id="jobHistory">
             <div class="card card-block">
-              Job 1
+              Communications & Relationship Manager @ SWG at Summit Financial
+              (5 yrs)
             </div>
             <div class="card card-block">
-              Job 2
+              Student Success & Product Manager @ FISH Institute, LLC
+              (3 yrs)
+            </div>
+            <div class="card card-block">
+              Project Manager @ Nowell Amoroso Klein Bierman, PA
+              (1 yrs)
             </div>
           </div>
 
           <div class="collapse" id="education">
             <div class="card card-block">
-              School 1
+              Le Wagon Tokyo Batch #226: 2019
             </div>
             <div class="card card-block">
-              School 2
+              Seton Hall University: BS Business Administration: 2013
             </div>
             <div class="card card-block">
-              School 3
+              Seton Hall Prep: 2009
+            </div>
+          </div>
+          <div class="collapse" id="books">
+            <div class="card card-block">
+              Never Split the Difference by Chris Voss
+            </div>
+            <div class="card card-block">
+              Hooked by Nir Eyal
+            </div>
+            <div class="card card-block">
+              The Subtle Art of Not Giving a F*ck by Mark Manson
+            </div>
+          </div>
+          <div class="collapse" id="podcasts">
+            <div class="card card-block">
+              How I Built This with Guy Raz
+            </div>
+            <div class="card card-block">
+              Masters of Scale with Reid Hoffman
+            </div>
+            <div class="card card-block">
+              This Week in Startups with Jason Calcanis
             </div>
           </div>
         </p>

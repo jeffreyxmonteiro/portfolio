@@ -18,7 +18,7 @@ module ApplicationHelper
 
 
   def copyright_generator
-    MonteiroViewTool::Renderer.copyright('Jeff Monteiro', 'All rights reserved')
+    MonteiroViewTool::Renderer.copyright('Jeffrey Xavier Monteiro', 'All Rights Reserved')
   end
 
   def nav_items
@@ -26,6 +26,10 @@ module ApplicationHelper
       {
         url: root_path,
         title: 'Home'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
       },
       {
         url: about_path,
@@ -38,10 +42,6 @@ module ApplicationHelper
       {
         url: blogs_path,
         title: 'Blogs'
-      },
-      {
-        url: portfolios_path,
-        title: 'Portfolio'
       },
       {
         url: tech_news_path,

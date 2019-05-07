@@ -52,7 +52,7 @@ h6, .h6 {
 
 
 .cover-container {
-  max-width: 55em;
+  max-width: 70em;
 }
 
 
@@ -202,10 +202,26 @@ h6, .h6 {
 
 #jobHistory > .card {
   padding: 10px;
+  background-color: #24267F;
+  color: white;
 }
 
 #education > .card {
   padding: 10px;
+  background-color: #EE626A;
+  color: white;
+}
+
+#books > .card {
+  padding: 10px;
+  background-color: #52CEFC;
+  color: white;
+}
+
+#podcasts > .card {
+  padding: 10px;
+  background-color: #8952FC;
+  color: white;
 }
 
 .skill {
@@ -213,3 +229,7 @@ h6, .h6 {
   margin-bottom: 10px;
 }
 
+.header-center-about {
+  text-align: center;
+  padding-bottom: 30px;
+}
