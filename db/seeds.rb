@@ -8,6 +8,27 @@
 
 #db:setup to restart database so you dont have to keep destroying seeds
 
+
+User.create!(
+  email: "test@test.com",
+  password: "monkey1",
+  password_confirmation: "monkey1",
+  name: "Admin User",
+  roles: "site_admin"
+)
+
+puts "1 Admin user created"
+
+User.create!(
+  email: "test2@test.com",
+  password: "monkey1",
+  password_confirmation: "monkey1",
+  name: "Regular User",
+)
+
+puts "1 regular user created"
+
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
