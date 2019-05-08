@@ -9,15 +9,16 @@ module ApplicationHelper
      end
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting me from #{session[:source]}!"
-      content_tag(:p, greeting, class: "source-greeting")
+      greeting = "Thanks for visiting me from #{session[:source]}, feel free to #{ link_to 'say hello', contact_path, class: 'alert-link' } if you'd like to work together :)"
+      content_tag(:div, greeting.html_safe, class: styles)
     end
   end
 
+
   def copyright_generator
-    MonteiroViewTool::Renderer.copyright('Jeff Monteiro', 'All rights reserved')
+    MonteiroViewTool::Renderer.copyright('Jeffrey Xavier Monteiro', 'All Rights Reserved')
   end
 
   def nav_items
@@ -25,6 +26,10 @@ module ApplicationHelper
       {
         url: root_path,
         title: 'Home'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
       },
       {
         url: about_path,
@@ -37,10 +42,6 @@ module ApplicationHelper
       {
         url: blogs_path,
         title: 'Blogs'
-      },
-      {
-        url: portfolios_path,
-        title: 'Portfolio'
       },
       {
         url: tech_news_path,

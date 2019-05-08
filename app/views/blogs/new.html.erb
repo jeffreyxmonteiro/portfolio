@@ -7,8 +7,12 @@
   <% end %>
 <% end %>
 <%=  f.input :title %>
+<%= f.input :topic_id, collection: Topic.all %>
+<%= f.input :status, as: :radio_buttons, collection: [['0', 'draft'], ['1', 'published']], label_method: :second %>
 <%=  f.input :body, :input_html => {:rows => 15} %>
 <%= f.submit "add a blog post", class: "btn btn-primary" %>
 <% end %>
 
 <p> <%= link_to "Return to Blogs Page", blogs_path %>   </p>
+
+

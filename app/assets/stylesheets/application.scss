@@ -22,7 +22,6 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -30,6 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -41,8 +41,18 @@ body {
   text-align: center;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+
 .cover-container {
-  max-width: 55em;
+  max-width: 70em;
 }
 
 
@@ -168,4 +178,58 @@ body {
 
 .tech-news > .card {
   padding: 30px;
+}
+
+.app-card-container {
+  color: black;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.app-card-container a {
+  color: blue;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#jobHistory > .card {
+  padding: 10px;
+  background-color: #24267F;
+  color: white;
+}
+
+#education > .card {
+  padding: 10px;
+  background-color: #EE626A;
+  color: white;
+}
+
+#books > .card {
+  padding: 10px;
+  background-color: #52CEFC;
+  color: white;
+}
+
+#podcasts > .card {
+  padding: 10px;
+  background-color: #8952FC;
+  color: white;
+}
+
+.skill {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header-center-about {
+  text-align: center;
+  padding-bottom: 30px;
 }

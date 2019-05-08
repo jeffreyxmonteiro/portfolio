@@ -5,7 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab" rel="stylesheet">
     <meta name="keywords" content="<%= @seo_keywords %>" />
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+
 
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -23,7 +27,6 @@
         <div class="col-md-8 blog-main">
           <%= yield %>
         </div>
-
         <%= render 'shared/blog_sidebar' %>
       </div>
     </main>
@@ -32,6 +35,5 @@
 
     <%= alerts %>
 
-    <%= source_helper("blog") %>
   </body>
 </html>
