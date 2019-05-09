@@ -6,7 +6,7 @@
     <div class="col-md-5">
       <h1> <%= @portfolio_item.title %></h1>
       <h3> <%= @portfolio_item.subtitle %></h3>
-      <p> <%= @portfolio_item.body %></p>
+      <p> <%= markdown @portfolio_item.body %></p>
       <%= link_to "Home", portfolios_path %>
 
       <h2>Technologies Used</h2>

@@ -163,7 +163,7 @@ h6, .h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('tiger-image.png') no-repeat;
+  background: image-url('bear-image.png') no-repeat;
   background-size: cover;
 }
 
@@ -216,12 +216,26 @@ h6, .h6 {
   padding: 10px;
   background-color: #52CEFC;
   color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    opacity: .8;
+  }
 }
 
 #podcasts > .card {
   padding: 10px;
   background-color: #8952FC;
   color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    opacity: .8;
+  }
 }
 
 .skill {
