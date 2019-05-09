@@ -3,8 +3,7 @@
 @import "gritter";
 
 
-
-body {
+html, body {
   height: 100%;
   font-family: 'Lato', sans-serif;
 }
@@ -13,8 +12,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-bottom: 0;
   background-color: transparent;
 
@@ -25,8 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 768px) {
   .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -82,31 +81,20 @@ footer p {
   border: 1px solid #dadadc;
 }
 
-.portfolio-responsive:hover {
-  opacity: .8;
-}
-
 .card-body {
-  height: 16vh;
+  height: 130px;
 }
 
 .card-header-portfolio {
   text-align: center;
   margin-bottom: 10px;
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    text-decoration: none;
-    opacity: .6;
-  }
 }
 
 .card {
-  border: 5px solid rgba(255, 255, 255, 0);
+  border: 5px solid rgba(255, 255, 255, .9);
   min-width: 350px;
   min-height: 200px;
+  background-color: rgba(255, 255, 255, .95);
 }
 
 #background {
@@ -122,4 +110,38 @@ footer p {
   // transform: translateX(-50%) translateY(-50%);
   background: image-url('darkness.png');
   background-size: auto;
+}
+
+.text-lighted {
+  color: white;
+  a {
+    color: white;
+  }
+  a:hover {
+    opacity: .8;
+  }
+}
+
+.card-capture {
+   h5, p {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-capture:hover {
+  h5, p, img {
+    opacity: .6;
+  }
+  text-decoration: none;
+}
+
+.show-row {
+  align-items: center;
+}
+
+.show-card {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, .6);
+  border: 5px solid rgba(255, 255, 255, .6);
 }

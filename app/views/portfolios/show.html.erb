@@ -1,23 +1,25 @@
-<div class="container portfolio-container">
-  <div class="row">
-    <div class="col-md-7">
-      <img src=<%= portfolio_img(@portfolio_item.main_image, 'main')%> alt="" width="100%">
-    </div>
-    <div class="col-md-5">
-      <h1> <%= @portfolio_item.title %></h1>
-      <h3> <%= @portfolio_item.subtitle %></h3>
-      <p> <%= markdown @portfolio_item.body %></p>
-      <%= link_to "Home", portfolios_path %>
+<div class="container portfolio-container show-container">
+  <div class="card show-card">
+    <div class="row show-row">
+      <div class="col-md-7">
+        <img src=<%= portfolio_img(@portfolio_item.main_image, 'main')%> alt="" width="100%">
+      </div>
+      <div class="col-md-5">
+        <h4> <%= @portfolio_item.title %></h4>
+        <h6> <%= @portfolio_item.subtitle %></h6>
+        <p> <%= markdown @portfolio_item.body %></p>
 
-      <h2>Technologies Used</h2>
-      <% @portfolio_item.technologies.each do |technology_item| %>
-      <p><%= technology_item.name %> </p>
-      <% end %>
-      <% if logged_in?(:site_admin) %>
-        <div>
-          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-danger' %>
-        </div>
-      <% end %>
+
+        <h6>Technologies Used</h6>
+        <% @portfolio_item.technologies.each do |technology_item| %>
+        <p><%= technology_item.name %> </p>
+        <% end %>
+        <% if logged_in?(:site_admin) %>
+          <div>
+            <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-danger' %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
