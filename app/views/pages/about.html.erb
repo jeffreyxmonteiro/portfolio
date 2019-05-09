@@ -8,7 +8,7 @@
         <%= image_tag "jeff.jpg", width: 300 %>
 
         <div class="skills">
-          <% @skills.each do |skill| %>
+          <% @skills.sort.each do |skill| %>
             <div class="skill">
               <h4><%= skill.title %></h4>
               <div class="progress">
@@ -110,25 +110,25 @@
             </div>
           </div>
           <div class="collapse" id="books">
+              <div class="card card-block">
+                <a href="https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/B01COR1GM2" target=”_blank”>Never Split the Difference by Chris Voss</a>
+              </div>
             <div class="card card-block">
-              Never Split the Difference by Chris Voss
+                <a href="https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788" target=”_blank”>Hooked by Nir Eyal</a>
             </div>
             <div class="card card-block">
-              Hooked by Nir Eyal
-            </div>
-            <div class="card card-block">
-              The Subtle Art of Not Giving a F*ck by Mark Manson
+                <a href="https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713" target=”_blank”>The Subtle Art of Not Giving a F*ck by Mark Manson</a>
             </div>
           </div>
           <div class="collapse" id="podcasts">
             <div class="card card-block">
-              How I Built This with Guy Raz
+                <a href="https://www.npr.org/podcasts/510313/how-i-built-this" target=”_blank”>How I Built This with Guy Raz</a>
             </div>
             <div class="card card-block">
-              Masters of Scale with Reid Hoffman
+                <a href="https://mastersofscale.com/" target=”_blank”>Masters of Scale with Reid Hoffman</a>
             </div>
             <div class="card card-block">
-              This Week in Startups with Jason Calcanis
+                <a href="https://thisweekinstartups.com/" target=”_blank”>This Week in Startups with Jason Calcanis</a>
             </div>
           </div>
         </p>

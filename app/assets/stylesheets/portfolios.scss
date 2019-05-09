@@ -2,7 +2,8 @@
 @import "jquery-ui";
 @import "gritter";
 
-body {
+
+html, body {
   height: 100%;
   font-family: 'Lato', sans-serif;
 }
@@ -11,15 +12,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: transparent;
+
+  p {
+    color: white;
+  }
+
 }
 @media (min-width: 768px) {
   .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -29,15 +35,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .jumbotron-heading {
   font-weight: 300;
+  color: white;
 }
 
 .jumbotron .container {
   max-width: 40rem;
 }
 
+.portfolio-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30vw;
+  margin: auto;
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: transparent;
 }
 
 footer p {
@@ -62,4 +77,71 @@ footer p {
 
 .portfolio-responsive {
   width: 100%;
+  height: 200px;
+  border: 1px solid #dadadc;
+}
+
+.card-body {
+  height: 130px;
+}
+
+.card-header-portfolio {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: 5px solid rgba(255, 255, 255, .9);
+  min-width: 350px;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, .95);
+}
+
+#background {
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // min-width: 100%;
+  // min-height: 100%;
+  // height: auto;
+  // width: auto;
+  // z-index: -100;
+  // -webkit-transform: translateX(-50%) translateY(-50%);
+  // transform: translateX(-50%) translateY(-50%);
+  background: image-url('darkness.png');
+  background-size: auto;
+}
+
+.text-lighted {
+  color: white;
+  a {
+    color: white;
+  }
+  a:hover {
+    opacity: .8;
+  }
+}
+
+.card-capture {
+   h5, p {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-capture:hover {
+  h5, p, img {
+    opacity: .6;
+  }
+  text-decoration: none;
+}
+
+.show-row {
+  align-items: center;
+}
+
+.show-card {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, .6);
+  border: 5px solid rgba(255, 255, 255, .6);
 }
