@@ -92,21 +92,22 @@ h6, .h6 {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
+
+@media (min-width: 140px) {
+  .masthead-brand {
+    float: center;
+  }
+  .nav-masthead {
+    float: center;
+  }
+}
+
+@media (min-width: 980px) {
   .masthead-brand {
     float: left;
   }
   .nav-masthead {
     float: right;
-  }
-}
-
-@media (max-width: 48em) {
-  .masthead-brand {
-    display: none;
-  }
-  .nav-masthead {
-    float: center;
   }
 }
 
