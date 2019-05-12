@@ -101,6 +101,12 @@ h6, .h6 {
   }
 }
 
+@media (max-width: 40em) {
+.masthead-brand {
+    display: none;
+  }
+}
+
 
 /*
  * Cover
