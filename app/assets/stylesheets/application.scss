@@ -93,6 +93,15 @@ h6, .h6 {
 }
 
 
+body {
+  .masthead-brand {
+    float: center;
+  }
+  .nav-masthead {
+    float: center;
+  }
+}
+
 @media (min-width: 140px) {
   .masthead-brand {
     float: center;
@@ -259,4 +268,8 @@ h6, .h6 {
 .header-center-about {
   text-align: center;
   padding-bottom: 30px;
+}
+
+.header-padding-about {
+  padding-bottom: 20px;
 }
