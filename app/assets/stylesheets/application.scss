@@ -101,9 +101,12 @@ h6, .h6 {
   }
 }
 
-@media (max-width: 40em) {
-.masthead-brand {
+@media (max-width: 48em) {
+  .masthead-brand {
     display: none;
+  }
+  .nav-masthead {
+    float: center;
   }
 }
 
