@@ -92,7 +92,26 @@ h6, .h6 {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
+
+body {
+  .masthead-brand {
+    float: center;
+  }
+  .nav-masthead {
+    float: center;
+  }
+}
+
+@media (min-width: 140px) {
+  .masthead-brand {
+    float: center;
+  }
+  .nav-masthead {
+    float: center;
+  }
+}
+
+@media (min-width: 980px) {
   .masthead-brand {
     float: left;
   }
@@ -249,4 +268,12 @@ h6, .h6 {
 .header-center-about {
   text-align: center;
   padding-bottom: 30px;
+}
+
+.header-padding-about {
+  padding-bottom: 20px;
+}
+
+.tech-news-padding {
+  padding-top: 10px;
 }

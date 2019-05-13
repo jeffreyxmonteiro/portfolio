@@ -2,9 +2,7 @@
 @import "jquery-ui";
 @import "gritter";
 
-
 html, body {
-  height: 100%;
   font-family: 'Lato', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -50,13 +48,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: transparent;
 }
 
 footer p {
-  margin-bottom: .25rem;
+  margin-bottom: 5px;
 }
 
 // Custom styles
@@ -93,14 +91,18 @@ footer p {
 .card {
   border: 5px solid rgba(255, 255, 255, .9);
   min-width: 350px;
-  min-height: 200px;
   background-color: rgba(255, 255, 255, .95);
 }
 
-#background {
+.index-card {
+  max-width: 350px;
+  min-height: 200px;
+}
+
+body {
   // position: fixed;
-  // top: 50%;
-  // left: 50%;
+  // // top: 50%;
+  // // left: 50%;
   // min-width: 100%;
   // min-height: 100%;
   // height: auto;
@@ -109,6 +111,11 @@ footer p {
   // -webkit-transform: translateX(-50%) translateY(-50%);
   // transform: translateX(-50%) translateY(-50%);
   background: image-url('darkness.png');
+  background-size: auto;
+}
+
+#background {
+    background: image-url('darkness.png');
   background-size: auto;
 }
 
@@ -144,4 +151,12 @@ footer p {
   padding: 40px;
   background-color: rgba(255, 255, 255, .6);
   border: 5px solid rgba(255, 255, 255, .6);
+}
+
+.port-btn {
+  min-width: 185px;
+}
+
+.show-img-min {
+    min-width: 600px;
 }

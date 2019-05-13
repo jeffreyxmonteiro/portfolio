@@ -17,7 +17,6 @@
   <body>
 
       <%= render 'shared/portfolio_nav' %>
-      <div id="background">
         <%= render 'shared/portfolio_banner' unless logged_in?(:site_admin) %>
 
           <%= yield %>
@@ -25,7 +24,7 @@
 
 
         <%= render 'shared/portfolio_footer' %>
-      </div>
+
     <%= alerts %>
   </body>
 </html>
