@@ -1,16 +1,16 @@
 <div class="container portfolio-container show-container">
   <div class="card show-card">
     <div class="row show-row">
-      <div class="col-md-7">
+      <div class="col-md-7 show-img-min">
         <img src=<%= portfolio_img(@portfolio_item.main_image, 'main')%> alt="" width="100%">
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 show-font-min">
         <h4> <%= @portfolio_item.title %></h4>
-        <h6> <%= @portfolio_item.subtitle %></h6>
+        <h5> <%= @portfolio_item.subtitle %></h5>
         <p> <%= markdown @portfolio_item.body %></p>
 
 
-        <h6>Technologies Used</h6>
+        <h5>Technologies Used</h5>
         <% @portfolio_item.technologies.each do |technology_item| %>
         <p><%= technology_item.name %> </p>
         <% end %>
