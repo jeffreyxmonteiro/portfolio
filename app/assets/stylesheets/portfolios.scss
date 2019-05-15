@@ -143,12 +143,9 @@ body {
   text-decoration: none;
 }
 
-.show-row {
-  align-items: center;
-}
-
 .show-card {
   padding: 40px;
+  margin-top: 30px;
   background-color: rgba(255, 255, 255, .6);
   border: 5px solid rgba(255, 255, 255, .6);
 }
@@ -158,7 +155,7 @@ body {
 }
 
 .show-img-min {
-    min-width: 600px;
+    min-width: 365px;
 }
 
 .title-separation {
@@ -167,4 +164,8 @@ body {
 
 .portfolio-content-body {
   padding-top: 20px;
+}
+
+.portfolio-show-container {
+  max-width: 900px;
 }
