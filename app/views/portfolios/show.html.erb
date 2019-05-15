@@ -1,24 +1,33 @@
-<div class="container portfolio-container show-container">
+<div class="container portfolio-container portfolio-show-container">
   <div class="card show-card">
-    <div class="row show-row">
-      <div class="col-md-7 show-img-min">
+    <div class="row">
+      <div class="col-md-8 show-img-min">
         <img src=<%= portfolio_img(@portfolio_item.main_image, 'main')%> alt="" width="100%">
       </div>
-      <div class="col-md-5 show-font-min">
-        <h4> <%= @portfolio_item.title %></h4>
-        <h5> <%= @portfolio_item.subtitle %></h5>
-        <p> <%= markdown @portfolio_item.body %></p>
-
-
+      <div class="col-md-4 show-font-min">
+        <div class="title-separation">
+          <h3> <%= @portfolio_item.title %></h3>
+          <h6> <%= @portfolio_item.subtitle %></h6>
+        </div>
         <h5>Technologies Used</h5>
         <% @portfolio_item.technologies.each do |technology_item| %>
-        <p><%= technology_item.name %> </p>
+          <ul>
+            <li><%= technology_item.name %></li>
+          </ul>
         <% end %>
         <% if logged_in?(:site_admin) %>
           <div>
             <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-danger' %>
           </div>
         <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 show-font-min">
+        <div class="portfolio-content-body">
+          <h5>Read more about <%= @portfolio_item.title %></h5>
+          <p> <%= markdown @portfolio_item.body %></p>
+        </div>
       </div>
     </div>
   </div>
