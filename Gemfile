@@ -68,7 +68,7 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 gem "mini_magick", ">= 4.9.4"
 gem 'carrierwave-aws', '~> 1.0'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
